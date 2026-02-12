@@ -1,11 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LNiceius</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio — Dein Name</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a class="logo" href="#">Levi</a>
+        <div class="nav-controls">
+          <button class="nav-toggle" aria-label="Navigation umschalten">
+            ☰
+          </button>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#projects">Projekte</a></li>
+          <li><a href="#about">Über mich</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <button class="theme-toggle" aria-label="Thema wechseln">🌙</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero container">
+        <h1>Hi, ich bin Levi</h1>
+        <p>Frontend-Entwickler • Designer • Problemlöser</p>
+        <a class="btn" href="#coding-projects">Code Projects</a>
+        <a class="btn" href="#design-projects">Designs</a>
+      </section>
+
+      <section id="coding-projects" class="container projects">
+        <h2>Coding</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="media">
+              <img src="assets/placeholder.png" alt="Projekt 1" />
+            </div>
+            <h3>Projekt 1</h3>
+            <p>Kurzbeschreibung des Projekts.</p>
+            <a class="btn-link" href="#">Mehr</a>
+          </article>
+
+          <article class="card">
+            <div class="media">
+              <img src="assets/placeholder.png" alt="Projekt 2" />
+            </div>
+            <h3>Projekt 2</h3>
+            <p>Kurzbeschreibung des Projekts.</p>
+            <a class="btn-link" href="#">Mehr</a>
+          </article>
+
+          <article class="card">
+            <div class="media">
+              <img src="assets/placeholder.png" alt="Projekt 3" />
+            </div>
+            <h3>Projekt 3</h3>
+            <p>Kurzbeschreibung des Projekts.</p>
+            <a class="btn-link" href="#">Mehr</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="design-projects" class="container projects">
+        <h2>Designs</h2>
+        <div class="grid">
+          <article class="card">
+            <div class="media">
+              <img src="assets/Poster1.png" alt="Projekt 1" />
+            </div>
+            <h3>Projekt 1</h3>
+            <p>Kurzbeschreibung des Projekts.</p>
+            <a class="btn-link" href="#">Mehr</a>
+          </article>
+
+          <article class="card">
+            <div class="media">
+              <img src="assets/Poster2.png" alt="Projekt 2" />
+            </div>
+            <h3>Projekt 2</h3>
+            <p>Kurzbeschreibung des Projekts.</p>
+            <a class="btn-link" href="#">Mehr</a>
+          </article>
+
+        </div>
+      </section>
+
+      <section id="about" class="container about">
+        <h2>Über mich</h2>
+        <p>Kurzer Text über dich — Skills, Arbeitsweise, Interessen.</p>
+      </section>
+
+      <section id="contact" class="container contact">
+        <h2>Kontakt</h2>
+        <p>Email: <a href="mailto:hi@example.com">hi@example.com</a></p>
+      </section>
+    </main>
+
+    <footer class="site-footer container">
+      <p>© 2026 Dein Name</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
