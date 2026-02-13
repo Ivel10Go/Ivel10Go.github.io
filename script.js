@@ -1,31 +1,60 @@
 // Einfache Navigation (Toggle) und smooth scroll
 document.addEventListener('DOMContentLoaded', function () {
-  const toggle = document.querySelector('.nav-toggle');
-  const navList = document.querySelector('.nav-list');
   const themeToggle = document.querySelector('.theme-toggle');
   const root = document.documentElement;
 
-  // Initiales Thema aus localStorage oder Systempräferenz
+  // Initiales Thema aus localStorage oder Systempräferenz (dark standardmäßig aktivieren)
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark') root.classList.add('dark');
   else if (savedTheme === 'light') root.classList.remove('dark');
-  else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) root.classList.add('dark');
+  else {
+    // keine Einstellung: dark als Default setzen
+    root.classList.add('dark');
+  }
+
+  function updateLogo() {
+    const logo = document.getElementById('site-logo');
+    if (!logo) return;
+    logo.src = root.classList.contains('dark') ? 'assets/logoWhite.png' : 'assets/logo.png';
+  }
 
   if (themeToggle) {
     themeToggle.addEventListener('click', function () {
       const isDark = root.classList.toggle('dark');
       localStorage.setItem('theme', isDark ? 'dark' : 'light');
       themeToggle.textContent = isDark ? '☀️' : '🌙';
+      updateLogo();
     });
-    // Set initial icon
+    // Set initial icon and logo
     themeToggle.textContent = root.classList.contains('dark') ? '☀️' : '🌙';
+    updateLogo();
   }
 
-  if (toggle && navList) {
-    toggle.addEventListener('click', function () {
-      navList.classList.toggle('open');
+  // Scroll Reveal Animation
+  const revealElements = document.querySelectorAll('section, .card, .about-content, .contact-card');
+  revealElements.forEach(el => el.classList.add('reveal'));
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // Mouse Parallax for BG Glow
+  const bgGlow = document.querySelector('.bg-glow');
+  if (bgGlow) {
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth) * 20;
+      const y = (e.clientY / window.innerHeight) * 20;
+      bgGlow.style.transform = `translate(${x}px, ${y}px)`;
     });
   }
+
 
   // Smooth scroll für interne Links
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {

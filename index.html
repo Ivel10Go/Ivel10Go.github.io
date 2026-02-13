@@ -1,108 +1,167 @@
 <!doctype html>
-<html lang="de">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio — Dein Name</title>
+    <title>Portfolio — Levi Neisius</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="bg-glow"></div>
     <header class="site-header">
       <nav class="nav container">
-        <a class="logo" href="#">Levi</a>
-        <div class="nav-controls">
-          <button class="nav-toggle" aria-label="Navigation umschalten">
-            ☰
-          </button>
+        <a class="logo" href="#">
+          <img id="site-logo" src="assets/logo.png" alt="Logo" />
+        </a>
+        <div class="nav-links">
+          <a href="https://github.com/ivel10Go" target="_blank">
+            <i data-lucide="github"></i> GitHub
+          </a>
+          <a href="#contact">Contact</a>
         </div>
-        <ul class="nav-list">
-          <li><a href="#projects">Projekte</a></li>
-          <li><a href="#about">Über mich</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-        <button class="theme-toggle" aria-label="Thema wechseln">🌙</button>
+        <button class="theme-toggle" aria-label="Toggle Theme">🌙</button>
       </nav>
     </header>
 
     <main>
       <section id="hero" class="hero container">
-        <h1>Hi, ich bin Levi</h1>
-        <p>Frontend-Entwickler • Designer • Problemlöser</p>
-        <a class="btn" href="#coding-projects">Code Projects</a>
-        <a class="btn" href="#design-projects">Designs</a>
+        <span class="badge-top">Available for work</span>
+        <h1>Hi, I'm Levi 👋</h1>
+        <p>I develop and create everything that comes to my mind and makes me fun.</p>
+        <div class="hero-btns">
+          <a class="btn" href="#coding-projects">
+            <i data-lucide="code"></i> Coding Projects
+          </a>
+          <a class="btn secondary" href="#design-projects">
+            <i data-lucide="palette"></i> Designs
+          </a>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse"></div>
+          <p>Scroll down</p>
+        </div>
       </section>
 
       <section id="coding-projects" class="container projects">
-        <h2>Coding</h2>
+        <div class="section-header">
+          <h2>Coding Projects</h2>
+          <p>A selection of my web developments.</p>
+        </div>
         <div class="grid">
           <article class="card">
             <div class="media">
-              <img src="assets/placeholder.png" alt="Projekt 1" />
+              <img src="assets/StudyApp.png" alt="Flip Clock" />
+              <span class="InProgress">In Progress</span>
             </div>
-            <h3>Projekt 1</h3>
-            <p>Kurzbeschreibung des Projekts.</p>
-            <a class="btn-link" href="#">Mehr</a>
+            <h3>cozy Study App</h3>
+            <p>A modern study app with a focus on productivity and user experience.</p>
+            <div class="tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">UI/UX</span>
+            </div>
+          </article>
+
+          <!-- <article class="card">
+            <div class="media">
+              <img src="assets/placeholder.png" alt="Project 2" />
+              <span class="badge">Next.js</span>
+            </div>
+            <h3>Coming Soon</h3>
+            <p>An exciting new project is in the works. Stay tuned!</p>
+            <div class="tags">
+              <span class="tag">Next.js</span>
+              <span class="tag">Tailwind</span>
+            </div>
+            <a class="btn-link" href="#">More</a>
           </article>
 
           <article class="card">
             <div class="media">
-              <img src="assets/placeholder.png" alt="Projekt 2" />
+              <img src="assets/placeholder.png" alt="Project 3" />
+              <span class="badge">Python</span>
             </div>
-            <h3>Projekt 2</h3>
-            <p>Kurzbeschreibung des Projekts.</p>
-            <a class="btn-link" href="#">Mehr</a>
-          </article>
-
-          <article class="card">
-            <div class="media">
-              <img src="assets/placeholder.png" alt="Projekt 3" />
+            <h3>Coming Soon</h3>
+            <p>More projects will appear here soon.</p>
+            <div class="tags">
+              <span class="tag">Python</span>
+              <span class="tag">API</span>
             </div>
-            <h3>Projekt 3</h3>
-            <p>Kurzbeschreibung des Projekts.</p>
-            <a class="btn-link" href="#">Mehr</a>
-          </article>
+            <a class="btn-link" href="#">More</a>
+          </article> -->
         </div>
       </section>
 
       <section id="design-projects" class="container projects">
-        <h2>Designs</h2>
-        <div class="grid">
+        <div class="section-header">
+          <h2>Visual Designs</h2>
+          <p>Creative works and poster designs.</p>
+        </div>
+        <div class="grid design-grid">
           <article class="card">
             <div class="media">
-              <img src="assets/Poster1.png" alt="Projekt 1" />
+              <img src="assets/Poster1.png" alt="Project 1" />
+              <span class="badge">Poster</span>
             </div>
-            <h3>Projekt 1</h3>
-            <p>Kurzbeschreibung des Projekts.</p>
-            <a class="btn-link" href="#">Mehr</a>
+            <h3>Leo Neugebauer</h3>
+            <p>Dynamic sports poster design for the decathlon star.</p>
+            <div class="tags">
+              <span class="tag">Photoshop</span>
+            </div>
+            <a class="btn-link" target="_blank" href="https://www.instagram.com/p/DO82RDYjJQV/">View Design</a>
           </article>
 
           <article class="card">
             <div class="media">
-              <img src="assets/Poster2.png" alt="Projekt 2" />
+              <img src="assets/Poster2.png" alt="Project 2" />
+              <span class="badge">Poster</span>
             </div>
-            <h3>Projekt 2</h3>
-            <p>Kurzbeschreibung des Projekts.</p>
-            <a class="btn-link" href="#">Mehr</a>
+            <h3>Ivan Pritajn</h3>
+            <p>Sports poster design for Ivan Pritajn.</p>
+            <div class="tags">
+              <span class="tag">Photoshop</span>
+            </div>
+            <a class="btn-link" target="_blank" href="https://www.instagram.com/p/DO1Ub7pjMXS/">View Design</a>
           </article>
-
         </div>
       </section>
 
       <section id="about" class="container about">
-        <h2>Über mich</h2>
-        <p>Kurzer Text über dich — Skills, Arbeitsweise, Interessen.</p>
+        <div class="section-header">
+          <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+          <p>I love creating tech related stuff. From Apps to Music Projects. If I could I would learn anything..</p>
+        </div>
       </section>
 
       <section id="contact" class="container contact">
-        <h2>Kontakt</h2>
-        <p>Email: <a href="mailto:hi@example.com">hi@example.com</a></p>
+        <div class="section-header">
+          <h2>Contact</h2>
+          <p>Let's work together!</p>
+        </div>
+        <a href="mailto:levi.neisius@yahoo.com" class="contact-card">
+          <i data-lucide="mail"></i>
+          <span>levi.neisius@yahoo.com</span>
+        </a>
       </section>
     </main>
 
     <footer class="site-footer container">
-      <p>© 2026 Dein Name</p>
+      <div class="footer-content">
+        <p>© 2026 Levi Neisius • Built with Passion</p>
+        <div class="social-links">
+          <a href="https://github.com/ivel10Go" target="_blank"><i data-lucide="github"></i></a>
+        </div>
+      </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
   </body>
 </html>
